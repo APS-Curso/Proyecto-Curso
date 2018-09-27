@@ -1,0 +1,10 @@
+c:\users\santiago\source\repos\Sis_Cursos\Negocios\bin\Debug\Negocios.dll
+c:\users\santiago\source\repos\Sis_Cursos\Negocios\bin\Debug\Negocios.pdb
+c:\users\santiago\source\repos\Sis_Cursos\Negocios\bin\Debug\DatosSQL.dll
+c:\users\santiago\source\repos\Sis_Cursos\Negocios\bin\Debug\Entidades.dll
+c:\users\santiago\source\repos\Sis_Cursos\Negocios\bin\Debug\Entidades.pdb
+c:\users\santiago\source\repos\Sis_Cursos\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache
+c:\users\santiago\source\repos\Sis_Cursos\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+c:\users\santiago\source\repos\Sis_Cursos\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+c:\users\santiago\source\repos\Sis_Cursos\Negocios\obj\Debug\Negocios.dll
+c:\users\santiago\source\repos\Sis_Cursos\Negocios\obj\Debug\Negocios.pdb
