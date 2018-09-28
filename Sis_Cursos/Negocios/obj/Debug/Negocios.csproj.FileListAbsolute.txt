@@ -8,3 +8,13 @@ c:\users\santiago\source\repos\Sis_Cursos\Negocios\obj\Debug\Negocios.csproj.Cor
 c:\users\santiago\source\repos\Sis_Cursos\Negocios\obj\Debug\Negocios.csproj.CopyComplete
 c:\users\santiago\source\repos\Sis_Cursos\Negocios\obj\Debug\Negocios.dll
 c:\users\santiago\source\repos\Sis_Cursos\Negocios\obj\Debug\Negocios.pdb
+C:\Users\santiago\Desktop\Proyecto-Curso\Sis_Cursos\Negocios\bin\Debug\Negocios.dll
+C:\Users\santiago\Desktop\Proyecto-Curso\Sis_Cursos\Negocios\bin\Debug\Negocios.pdb
+C:\Users\santiago\Desktop\Proyecto-Curso\Sis_Cursos\Negocios\bin\Debug\DatosSQL.dll
+C:\Users\santiago\Desktop\Proyecto-Curso\Sis_Cursos\Negocios\bin\Debug\Entidades.dll
+C:\Users\santiago\Desktop\Proyecto-Curso\Sis_Cursos\Negocios\bin\Debug\Entidades.pdb
+C:\Users\santiago\Desktop\Proyecto-Curso\Sis_Cursos\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache
+C:\Users\santiago\Desktop\Proyecto-Curso\Sis_Cursos\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\santiago\Desktop\Proyecto-Curso\Sis_Cursos\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+C:\Users\santiago\Desktop\Proyecto-Curso\Sis_Cursos\Negocios\obj\Debug\Negocios.dll
+C:\Users\santiago\Desktop\Proyecto-Curso\Sis_Cursos\Negocios\obj\Debug\Negocios.pdb
