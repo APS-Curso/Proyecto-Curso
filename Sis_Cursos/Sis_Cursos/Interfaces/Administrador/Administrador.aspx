@@ -24,14 +24,14 @@
 		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 		    <a class="dropdown-item" href="#"><i class="fas fa-edit"></i>Editar</a>
   			<div class="dropdown-divider"></div>
-		    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a>
+		    <a class="dropdown-item" href="../../index.aspx"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a>
 		  </div>
 		</div>
 	</nav>
     <form id="form1" runat="server">
         <div class="row">
             <div class="col-2 bg-dark mside">
-	          <div id="sidebar" class="bg-dark" class="nav flex-column nav-pills"role="tablist" aria-orientation="vertical">
+	          <div id="sidebar" class="bg-dark nav flex-column nav-pills"role="tablist" aria-orientation="vertical">
 		          <ul class="list-unstyled components" >
                 	    <li>
 	                        <a href="#">Inicio<i class="fas fa-home"></i></a>
@@ -88,7 +88,6 @@
 	      <div class="col-10 contenedor">
 
 	      </div>
-        </div>
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
