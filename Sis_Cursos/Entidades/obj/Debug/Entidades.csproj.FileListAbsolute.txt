@@ -4,3 +4,9 @@ c:\users\santiago\source\repos\Sis_Cursos\Entidades\obj\Debug\Entidades.csprojRe
 c:\users\santiago\source\repos\Sis_Cursos\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 c:\users\santiago\source\repos\Sis_Cursos\Entidades\obj\Debug\Entidades.dll
 c:\users\santiago\source\repos\Sis_Cursos\Entidades\obj\Debug\Entidades.pdb
+C:\Users\santiago\Desktop\Proyecto-Curso\Sis_Cursos\Entidades\bin\Debug\Entidades.dll
+C:\Users\santiago\Desktop\Proyecto-Curso\Sis_Cursos\Entidades\bin\Debug\Entidades.pdb
+C:\Users\santiago\Desktop\Proyecto-Curso\Sis_Cursos\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\santiago\Desktop\Proyecto-Curso\Sis_Cursos\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\santiago\Desktop\Proyecto-Curso\Sis_Cursos\Entidades\obj\Debug\Entidades.dll
+C:\Users\santiago\Desktop\Proyecto-Curso\Sis_Cursos\Entidades\obj\Debug\Entidades.pdb
