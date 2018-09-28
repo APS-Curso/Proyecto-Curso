@@ -40,10 +40,10 @@
 	                        <a href="#EstudianteSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle-lm bg-dark">Estudiantes<i class="fas fa-caret-down"></i></a>
 	                        <ul class="collapse list-unstyled bg-dark" id="EstudianteSubmenu">
 	                            <li>
-	                                <a href="#">Mostrar</a>	 
+	                                <asp:Button ID="btnMostrarEstudiantes" runat="server" Text="Mostrar" class="btnMenuLtr"/>
 	                            </li>
 	                            <li>
-	                                <a href="#">Eliminar</a>
+	                                <asp:Button ID="btnEliminarEstudiante" runat="server" Text="Eliminar" class="btnMenuLtr"/>
 	                            </li>
 	                        </ul>
 	                    </li>
@@ -51,16 +51,16 @@
 	                        <a href="#DocenteSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle-lm bg-dark">Docentes<i class="fas fa-caret-down"></i></a>
 	                        <ul class="collapse list-unstyled" id="DocenteSubmenu">
 	                            <li>
-	                                <a href="#">Agregar</a>	 
+	                                <asp:Button ID="btnAgregarDocente" runat="server" Text="Agregar" class="btnMenuLtr"/>
 	                            </li>
 	                            <li>
-	                                <a href="#">Mostrar</a>
+	                                <asp:Button ID="btnMostrarDocente" runat="server" Text="Mostrar" class="btnMenuLtr"/>
 	                            </li>
 	                            <li>
-	                                <a href="#">Agregar a curso</a>
+	                                <asp:Button ID="btnAgregarDocenteCurso" runat="server" Text="Agregar a curso" class="btnMenuLtr"/>
 	                            </li>
 	                            <li>
-	                                <a href="#">Eliminar</a>
+	                                <asp:Button ID="btnEliminarDocente" runat="server" Text="Eliminar" class="btnMenuLtr"/>
 	                            </li>
 	                        </ul>
 	                    </li>
@@ -68,16 +68,16 @@
 	                        <a href="#CursosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle-lm bg-dark">Cursos<i class="fas fa-caret-down"></i></a>
 	                        <ul class="collapse list-unstyled" id="CursosSubmenu">
 	                            <li>
-	                                <a href="#">Agregar</a>	 
+	                                <asp:Button ID="btnAgregarCurso" runat="server" Text="Agregar" class="btnMenuLtr"/>
 	                            </li>
 	                            <li>
-	                                <a href="#">Mostrar</a>
+	                                <asp:Button ID="btnMostrarCurso" runat="server" Text="Mostrar" class="btnMenuLtr"/>
 	                            </li>
 	                            <li>
-	                                <a href="#">Modificar</a>
+	                                <asp:Button ID="btnModificarCurso" runat="server" Text="Modificar" class="btnMenuLtr"/>
 	                            </li>
 	                            <li>
-	                                <a href="#">Eliminar</a>
+	                                <asp:Button ID="btnEliminarCurso" runat="server" Text="Eliminar" class="btnMenuLtr"/>
 	                            </li>
 	                        </ul>
 	                    </li>
