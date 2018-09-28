@@ -1,6 +1,3 @@
-
-
-
 .mside{
 	display: inline-block;
   	height: 100%;
@@ -18,6 +15,14 @@
 #sidebar a,
 a:hover,
 a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar .btnMenuLtr,
+.btnMenuLtr:hover,
+.btnMenuLtr:focus {
     color: inherit;
     text-decoration: none;
     transition: all 0.3s;
@@ -67,6 +72,26 @@ ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
     background: #343a40;
+}
+
+#sidebar ul li .btnMenuLtr {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+.btnMenuLtr {
+    margin: 0;
+    border: none;
+    font-size: 0.9em !important;
+    text-align: left;
+    padding-left: 30px !important;
+    background: #343a40;
+    width: 100%;
+}
+
+.btnMenuLtr:hover {
+    background: #61707F;
 }
 
 /* ---------------------------------------------------
