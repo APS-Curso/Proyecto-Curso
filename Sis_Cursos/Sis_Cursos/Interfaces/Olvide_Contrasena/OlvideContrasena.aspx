@@ -7,51 +7,58 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../../css/floating-labels.css" type="text/css"/>
-    <title></title>
+	<link rel="icon" type="image/png" href="../../img/favicon.png">
+    <title>Recuperar contraseña</title>
 </head>
 <body>
     <form id="form1" runat="server"  class="form-signin">
         <asp:Panel ID="pFase1" runat="server">
-            <div class="text-center mb-4">
-                <img class="mb-4" src="../../img/sadface.jpg" alt="" width="72" height="72"/>
-                <h1 class="h3 mb-3 font-weight-normal">Recuperar Contraseña</h1>
-                <p>Se enviara un código de seguridad a su correo para restablecer<br /> su contraseña</p>
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="text-center mb-4">
+                    <img class="mb-4" src="../../img/sadface.jpg" alt="" width="72" height="72"/>
+                    <h1 class="h3 mb-3 font-weight-normal">Recuperar Contraseña</h1>
+                    <p>Se enviara un código de seguridad a su correo para restablecer su contraseña</p>
+                </div>
+                <div class="form-label-group">
+                    <asp:TextBox ID="inputEmail" runat="server" class="form-control" placeholder="Correo"></asp:TextBox>
+                    <label for="inputEmail">Correo</label>
+                </div>
+                <asp:Button ID="btnEnviarCodigo" runat="server" class="btn btn-lg btn-primary btn-block" Text="Enviar" OnClick="btnEnviarCodigo_Click" />
             </div>
-            <div class="form-label-group">
-                <asp:TextBox ID="inputEmail" runat="server" class="form-control" placeholder="Correo"></asp:TextBox>
-                <label for="inputEmail">Correo</label>
-            </div>
-            <asp:Button ID="btnEnviarCodigo" runat="server" class="btn btn-lg btn-primary btn-block" Text="Enviar" OnClick="btnEnviarCodigo_Click" />
         </asp:Panel>
 
         <asp:Panel ID="pFase2" runat="server">
-            <div class="text-center mb-4">
-                <img class="mb-4" src="../../img/sorprise.jpg" alt="" width="72" height="72"/>
-                <h1 class="h3 mb-3 font-weight-normal">Recuperar Contraseña</h1>
-                <p>Escribe el código de seguridad</p>
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="text-center mb-4">
+                    <img class="mb-4" src="../../img/sorprise.jpg" alt="" width="72" height="72"/>
+                    <h1 class="h3 mb-3 font-weight-normal">Recuperar Contraseña</h1>
+                    <p>Escribe el código de seguridad</p>
+                </div>
+                <div class="form-label-group">
+                    <asp:TextBox ID="tbCodigo" runat="server" class="form-control" placeholder="Codigo de Seguridad"></asp:TextBox>
+                    <label for="tbCodigo">Codigo de Seguridad</label>
+                </div>
+                <asp:Button ID="btnConfirmar" runat="server" class="btn btn-lg btn-primary btn-block" Text="Confirmar" OnClick="btnConfirmar_Click" />
             </div>
-            <div class="form-label-group">
-                <asp:TextBox ID="tbCodigo" runat="server" class="form-control" placeholder="Codigo de Seguridad"></asp:TextBox>
-                <label for="tbCodigo">Codigo de Seguridad</label>
-            </div>
-            <asp:Button ID="btnConfirmar" runat="server" class="btn btn-lg btn-primary btn-block" Text="Confirmar" OnClick="btnConfirmar_Click" />
         </asp:Panel>
 
         <asp:Panel ID="pFase3" runat="server">
-            <div class="text-center mb-4">
-                <img class="mb-4" src="../../img/happyface.jpg" alt="" width="72" height="72"/>
-                <h1 class="h3 mb-3 font-weight-normal">Recuperar Contraseña</h1>
-                <p>Elige una nueva contraseña</p>
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="text-center mb-4">
+                    <img class="mb-4" src="../../img/happyface.jpg" alt="" width="72" height="72"/>
+                    <h1 class="h3 mb-3 font-weight-normal">Recuperar Contraseña</h1>
+                    <p>Elige una nueva contraseña</p>
+                </div>
+                <div class="form-label-group">
+                    <asp:TextBox ID="inputPassword" runat="server" class="form-control" placeholder="Nueva Contraseña"></asp:TextBox>
+                    <label for="inputPassword">Nueva Contraseña</label>
+                </div>
+                <div class="form-label-group">
+                    <asp:TextBox ID="tbConfirmarContra" runat="server" class="form-control" placeholder="Confirmar"></asp:TextBox>
+                    <label for="tbConfirmarContra">Confirmar</label>
+                </div>
+                <asp:Button ID="btnCambiar" runat="server" class="btn btn-lg btn-primary btn-block" Text="Cambiar" OnClick="btnCambiar_Click" />
             </div>
-            <div class="form-label-group">
-                <asp:TextBox ID="inputPassword" runat="server" class="form-control" placeholder="Nueva Contraseña"></asp:TextBox>
-                <label for="inputPassword">Nueva Contraseña</label>
-            </div>
-            <div class="form-label-group">
-                <asp:TextBox ID="tbConfirmarContra" runat="server" class="form-control" placeholder="Confirmar"></asp:TextBox>
-                <label for="tbConfirmarContra">Confirmar</label>
-            </div>
-            <asp:Button ID="btnCambiar" runat="server" class="btn btn-lg btn-primary btn-block" Text="Cambiar" OnClick="btnCambiar_Click" />
         </asp:Panel>
     </form>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
