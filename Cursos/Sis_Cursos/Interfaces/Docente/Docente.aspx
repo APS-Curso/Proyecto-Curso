@@ -66,9 +66,42 @@
 	        </div>
 	    </div>
         <div class="col-10 contenedor">
-            <asp:Panel ID="pMostrarEstudiante" runat="server">Mostrar Estudiante</asp:Panel>
+            <asp:Panel ID="pMostrarEstudiante" runat="server" style="position: relative">Mostrar Estudiante<asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource2" ForeColor="Black" GridLines="Horizontal">
+                <Columns>
+                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                    <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
+                    <asp:BoundField DataField="Correo" HeaderText="Correo" SortExpression="Correo" />
+                </Columns>
+                <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                <SortedDescendingHeaderStyle BackColor="#242121" />
+                </asp:GridView>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [Nombre], [Apellido], [Correo] FROM [Usuarios]"></asp:SqlDataSource>
+            </asp:Panel>
             <asp:Panel ID="pEliminarEstudiante" runat="server">Eliminar Estudiante</asp:Panel>
-            <asp:Panel ID="pMostrarCurso" runat="server">Mostrar Curso</asp:Panel>
+            <asp:Panel ID="pMostrarCurso" runat="server" style="position: relative">Mostrar Curso<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal">
+                <Columns>
+                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                    <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+                    <asp:BoundField DataField="FechaIn" HeaderText="FechaIn" SortExpression="FechaIn" />
+                    <asp:BoundField DataField="FechaFn" HeaderText="FechaFn" SortExpression="FechaFn" />
+                </Columns>
+                <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                <SortedDescendingHeaderStyle BackColor="#242121" />
+                </asp:GridView>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [Nombre], [Descripcion], [FechaIn], [FechaFn] FROM [Curso]"></asp:SqlDataSource>
+            </asp:Panel>
             <asp:Panel ID="pModificarCurso" runat="server">Modificar Curso</asp:Panel>
             <asp:Panel ID="pEliminarCurso" runat="server">Eliminar Curso</asp:Panel>
 	    </div>
