@@ -165,8 +165,8 @@
                         <Columns>
                             <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                             <asp:BoundField DataField="Descripcion" HeaderText="Descripcion " SortExpression="Descripcion" />
-                            <asp:BoundField DataField="FechaIn" HeaderText="Fecha Inicial" SortExpression="FechaIn" />
-                            <asp:BoundField DataField="FechaFn" HeaderText="Fecha Final" SortExpression="FechaFn" />
+                            <asp:BoundField DataField="FechaIn" HeaderText="Inicio" SortExpression="FechaIn" />
+                            <asp:BoundField DataField="FechaFn" HeaderText="Fin" SortExpression="FechaFn" />
                         </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
