@@ -87,10 +87,44 @@
 	      </div>
         <div class="col-10 contenedor">
             <div class="tab-content" id="v-pills-tabContent">
-                <asp:Panel ID="pMostrarEstudiantes" runat="server">Mostrar Estudiantes</asp:Panel>
+                <asp:Panel ID="pMostrarEstudiantes" runat="server">Mostrar Estudiantes
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal">
+                        <Columns>
+                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
+                            <asp:BoundField DataField="Correo" HeaderText="Correo" SortExpression="Correo" />
+                        </Columns>
+                        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                        <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                        <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                        <SortedDescendingHeaderStyle BackColor="#242121" />
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [Nombre], [Apellido], [Correo] FROM [Usuarios]"></asp:SqlDataSource>
+                </asp:Panel>
                 <asp:Panel ID="pEliminarEstudiante" runat="server">Eliminar Estudiantes</asp:Panel>
                 <asp:Panel ID="pAgregarDocente" runat="server">Agregar Docente</asp:Panel>
-                <asp:Panel ID="pMostrarDocente" runat="server">Mostrar Docente</asp:Panel>
+                <asp:Panel ID="pMostrarDocente" runat="server">Mostrar Docente
+                    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal">
+                        <Columns>
+                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
+                            <asp:BoundField DataField="Correo" HeaderText="Correo" SortExpression="Correo" />
+                        </Columns>
+                        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                        <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                        <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                        <SortedDescendingHeaderStyle BackColor="#242121" />
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [Nombre], [Apellido], [Correo] FROM [Usuarios]"></asp:SqlDataSource>
+                </asp:Panel>
                 <asp:Panel ID="pAgregarDocenteCurso" runat="server">Agregar Docente a curso</asp:Panel>
                 <asp:Panel ID="pEliminarDocente" runat="server">Eliminar Docente</asp:Panel>
                 <asp:Panel ID="pAgregarCurso" runat="server">Agregar Curso</asp:Panel>

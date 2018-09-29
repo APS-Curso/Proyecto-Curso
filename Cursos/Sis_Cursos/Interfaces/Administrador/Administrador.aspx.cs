@@ -99,5 +99,16 @@ namespace Sis_Cursos.Interfaces.Administrador
             pEliminarCurso.Visible = true;
         }
         #endregion
+
+        protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridView2.Visible=true;
+
+        }
+
+        protected void GridView3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
