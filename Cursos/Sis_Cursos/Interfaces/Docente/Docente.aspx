@@ -19,6 +19,8 @@
         }
         .EstiloTitulo {
         }
+        .EstiloTitulo {
+        }
     </style>
 </head>
 <body>
@@ -124,7 +126,33 @@
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [Nombre], [Descripcion], [FechaIn], [FechaFn] FROM [Curso]"></asp:SqlDataSource>
             </asp:Panel>
-            <asp:Panel ID="pModificarCurso" runat="server">Modificar Curso</asp:Panel>
+            <asp:Panel ID="pModificarCurso" runat="server">
+                <div class="text-center">
+                    <span class="EstiloTitulo">
+                    <br />
+                    Modificar Curso
+                    <br />
+                    <br />
+                    </span>
+                </div>
+                <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle">
+                    <Columns>
+                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                        <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+                        <asp:BoundField DataField="FechaIn" HeaderText="Inicio" SortExpression="FechaIn" />
+                        <asp:BoundField DataField="FechaFn" HeaderText="Fin" SortExpression="FechaFn" />
+                        <asp:ButtonField ButtonType="Image" HeaderImageUrl="~/img/Modificar.png" ImageUrl="~/img/Modificar.png" />
+                    </Columns>
+                    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                    <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                    <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                    <SortedDescendingHeaderStyle BackColor="#242121" />
+                </asp:GridView>
+            </asp:Panel>
             <asp:Panel ID="pEliminarCurso" runat="server">Eliminar Curso</asp:Panel>
 	    </div>
     </form>
