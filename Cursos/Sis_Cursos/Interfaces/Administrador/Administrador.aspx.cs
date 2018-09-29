@@ -110,5 +110,10 @@ namespace Sis_Cursos.Interfaces.Administrador
         {
 
         }
+
+        protected void GridView4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
