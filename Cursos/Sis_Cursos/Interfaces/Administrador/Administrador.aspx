@@ -65,6 +65,9 @@
 	                    <li class="active">
 	                        <a href="#EstudianteSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle-lm bg-dark">Estudiantes<i class="fas fa-caret-down"></i></a>
 	                        <ul class="collapse list-unstyled bg-dark" id="EstudianteSubmenu">
+                                <li>
+	                                <asp:Button ID="btnAgregarEstudiante" runat="server" Text="Agregar" class="btnMenuLtr" OnClick="btnAgregarEstudiante_Click"/>
+	                            </li>
 	                            <li>
 	                                <asp:Button ID="btnMostrarEstudiantes" runat="server" Text="Mostrar" class="btnMenuLtr" OnClick="btnMostrarEstudiantes_Click"/>
 	                            </li>
@@ -91,7 +94,7 @@
 	                        </ul>
 	                    </li>
 	                    <li>
-	                        <a href="#CursosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle-lm bg-dark">CursosCursos<i class="fas fa-caret-down"></i></a>
+	                        <a href="#CursosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle-lm bg-dark">Cursos<i class="fas fa-caret-down"></i></a>
 	                        <ul class="collapse list-unstyled" id="CursosSubmenu">
 	                            <li>
 	                                <asp:Button ID="btnAgregarCurso" runat="server" Text="Agregar" class="btnMenuLtr" OnClick="btnAgregarCurso_Click"/>
@@ -113,6 +116,39 @@
 	      </div>
         <div class="col-10 contenedor">
             <div class="tab-content" id="v-pills-tabContent">
+                <asp:Panel ID="pAgregarEstudiante" runat="server">
+                    <div class="col-8 contenedor">
+                      <br />
+                        <form>
+                          <div class="form-row">
+                            <div class="col">
+                                <label for="NombreEstudiante">Nombre</label>                                                  
+                                <input type="text" class="form-control" id="NombreEstudiante"placeholder="Nombre"/>
+                            </div>
+                            <div class="col">
+                                <label for="ApellidoEstudiante">Apellido</label>
+                                <input type="text" class="form-control" id="ApellidoEstudiante" placeholder="Apellido"/>
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="Correo">Correo</label>
+                              <input type="email" class="form-control" id="CorreoEstudiante" placeholder="Correo"/>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="ContraseñaEstudiante">Contraseña</label>
+                              <input type="password" class="form-control" id="ContraseñaEstudiante" placeholder="Contraseña"/>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="UsuarioEstudiante">Usuario</label>
+                            <textarea class="form-control" id="UsuarioEstudiante" rows="1"></textarea>
+                          </div>
+                        </form>
+                          <br />
+                           <button class="btn btn-primary" type="submit">Agregar</button>
+	                  </div>
+                </asp:Panel>
                 <asp:Panel ID="pMostrarEstudiantes" runat="server" style="position: relative; text-align: center">
                     <strong>
                     <br />
@@ -159,7 +195,39 @@
                     <br />
                     <br />
                 </asp:Panel>
-                <asp:Panel ID="pAgregarDocente" runat="server">Agregar Docente</asp:Panel>
+                <asp:Panel ID="pAgregarDocente" runat="server">
+                    <div class="col-8 contenedor">
+                      <br />
+                        <form>
+                          <div class="form-row">
+                            <div class="col">
+                                <label for="NombreDocente">Nombre</label>                                                  
+                                <input type="text" class="form-control" id="NombreDocente" placeholder="Nombre"/>
+                            </div>
+                            <div class="col">
+                                <label for="ApellidoDocente">Apellido</label>
+                                <input type="text" class="form-control" id="ApellidoDocente" placeholder="Apellido"/>
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="CorreoDocente">Correo</label>
+                              <input type="email" class="form-control" id="CorreoDocente" placeholder="Correo"/>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="ContraseñaDocente">Contraseña</label>
+                              <input type="password" class="form-control" id="ContraseñaDocente" placeholder="Contraseña"/>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="UsuarioDocente">Usuario</label>
+                            <textarea class="form-control" id="UsuarioDocente" rows="1"></textarea>
+                          </div>
+                        </form>
+                          <br />
+                           <button class="btn btn-primary" type="submit">Agregar</button>
+	                  </div>
+                </asp:Panel>
                 <asp:Panel ID="pMostrarDocente" runat="server" style="position: relative; text-align: center;">
                     <span class="EstiloTitulo">
                     <br />
@@ -206,7 +274,35 @@
                     </asp:GridView>
                     <br />
                 </asp:Panel>
-                <asp:Panel ID="pAgregarCurso" runat="server">Agregar Curso</asp:Panel>
+                <asp:Panel ID="pAgregarCurso" runat="server">
+                    <div class="col-8 contenedor">
+                      <br />
+                      <form>
+                          <div class="form-group">
+                            <label for="NombreCurso">Nombre</label>
+                            <textarea class="form-control" id="NombreCurso" rows="1"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label for="DescripcionCurso">Descripción</label>
+                            <textarea class="form-control" id="DescripcionCurso" rows="3"></textarea>
+                          </div>
+                        </form>
+                      <form>
+                          <div class="row">
+                            <div class="col">
+                              <label for="FechaInicio">Fecha Inicio</label>
+                              <input type="date" class="form-control" id="FechaInicio"/>
+                            </div>
+                            <div class="col">
+                              <label for="FechaFin">Fecha Fin</label>
+                              <input type="date" class="form-control" id="FechaFin"/>
+                            </div>
+                          </div>
+                        </form>
+                      <br />
+                       <button class="btn btn-primary" type="submit">Agregar</button>
+	              </div>
+                </asp:Panel>
                 <asp:Panel ID="pMostrarCurso" runat="server" style="position: relative; text-align: center;">
                     <span class="auto-style1"><strong>
                     <br />

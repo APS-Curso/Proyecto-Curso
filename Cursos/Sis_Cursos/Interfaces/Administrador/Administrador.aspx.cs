@@ -20,6 +20,7 @@ namespace Sis_Cursos.Interfaces.Administrador
         #region Metodos
         protected void ApagarComponentes()
         {
+            pAgregarEstudiante.Visible = false;
             pMostrarEstudiantes.Visible = false;
             pEliminarEstudiante.Visible = false;
             pAgregarDocente.Visible = false;
@@ -40,6 +41,11 @@ namespace Sis_Cursos.Interfaces.Administrador
 
 
         #region Botones
+        protected void btnAgregarEstudiante_Click(object sender, EventArgs e)
+        {
+            ApagarComponentes();
+            pAgregarEstudiante.Visible = true;
+        }
         protected void btnMostrarEstudiantes_Click(object sender, EventArgs e)
         {
             ApagarComponentes();
