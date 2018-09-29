@@ -28,7 +28,7 @@
 		  </div>
 		</div>
 	</nav>
-    <form id="form1" runat="server" class="row">
+    <form id="form1" runat="server">
         <div class="row">
             <div class="col-2 bg-dark mside">
 	          <div id="sidebar" class="bg-dark nav flex-column nav-pills"role="tablist" aria-orientation="vertical">
