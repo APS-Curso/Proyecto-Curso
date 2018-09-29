@@ -128,7 +128,24 @@
                 <asp:Panel ID="pAgregarDocenteCurso" runat="server">Agregar Docente a curso</asp:Panel>
                 <asp:Panel ID="pEliminarDocente" runat="server">Eliminar Docente</asp:Panel>
                 <asp:Panel ID="pAgregarCurso" runat="server">Agregar Curso</asp:Panel>
-                <asp:Panel ID="pMostrarCurso" runat="server">Mostrar Curso</asp:Panel>
+                <asp:Panel ID="pMostrarCurso" runat="server" style="position: relative">Mostrar Curso<asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Horizontal">
+                    <Columns>
+                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                        <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+                        <asp:BoundField DataField="FechaIn" HeaderText="FechaIn" SortExpression="FechaIn" />
+                        <asp:BoundField DataField="FechaFn" HeaderText="FechaFn" SortExpression="FechaFn" />
+                    </Columns>
+                    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                    <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                    <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                    <SortedDescendingHeaderStyle BackColor="#242121" />
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [Nombre], [Descripcion], [FechaIn], [FechaFn] FROM [Curso]"></asp:SqlDataSource>
+                </asp:Panel>
                 <asp:Panel ID="pModificarCurso" runat="server">Modificar Curso</asp:Panel>
                 <asp:Panel ID="pEliminarCurso" runat="server">Eliminar Curso</asp:Panel>
             </div>
