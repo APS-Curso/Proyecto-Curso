@@ -10,6 +10,24 @@
 	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
 	<link rel="icon" type="image/png" href="../../img/favicon.png"/>
     <title>Administrador</title>
+    <style type="text/css">
+        EstiloTitulo {
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            font-size: x-large;
+        }
+        .EstiloTitulo {
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            font-size: large;
+        }
+        .EstiloTitulo {
+        }
+        .EstiloTitulo {
+        }
+        .auto-style1 {
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            font-size: large;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
@@ -19,8 +37,7 @@
 	  </a>
 	  <div class="dropdown">
 		  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		    Nombre Usuario
-		  </button>
+		    Nombre Usuario</button>
 		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 		    <a class="dropdown-item" href="#"><i class="fas fa-edit"></i>Editar</a>
   			<div class="dropdown-divider"></div>
@@ -87,12 +104,17 @@
 	      </div>
         <div class="col-10 contenedor">
             <div class="tab-content" id="v-pills-tabContent">
-                <asp:Panel ID="pMostrarEstudiantes" runat="server">Mostrar Estudiantes
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal">
+                <asp:Panel ID="pMostrarEstudiantes" runat="server" style="position: relative; text-align: center">
+                    <strong>
+                    <br />
+                    </strong>&nbsp;<span class="EstiloTitulo">Mostrar Estudiantes</span><strong><br />
+                    <br />
+                    </strong>
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle">
                         <Columns>
                             <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
-                            <asp:BoundField DataField="Correo" HeaderText="Correo" SortExpression="Correo" />
+                            <asp:BoundField DataField="Apellido" HeaderText="Apellidos" SortExpression="Apellido" />
+                            <asp:BoundField DataField="Correo" HeaderText="Correo Electronico" SortExpression="Correo" />
                         </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -103,16 +125,21 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [Nombre], [Apellido], [Correo] FROM [Usuarios]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [Nombre], [Apellido], [Correo], [Pass] FROM [Usuarios]"></asp:SqlDataSource>
                 </asp:Panel>
                 <asp:Panel ID="pEliminarEstudiante" runat="server">Eliminar Estudiantes</asp:Panel>
                 <asp:Panel ID="pAgregarDocente" runat="server">Agregar Docente</asp:Panel>
-                <asp:Panel ID="pMostrarDocente" runat="server">Mostrar Docente
-                    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal">
+                <asp:Panel ID="pMostrarDocente" runat="server" style="position: relative; text-align: center;">
+                    <span class="EstiloTitulo">
+                    <br />
+                    &nbsp;Mostrar Docente<br />
+                    <br />
+                    </span>
+                    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle">
                         <Columns>
                             <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
-                            <asp:BoundField DataField="Correo" HeaderText="Correo" SortExpression="Correo" />
+                            <asp:BoundField DataField="Apellido" HeaderText="Apellidos" SortExpression="Apellido" />
+                            <asp:BoundField DataField="Correo" HeaderText="Correo Electronico" SortExpression="Correo" />
                         </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -128,21 +155,27 @@
                 <asp:Panel ID="pAgregarDocenteCurso" runat="server">Agregar Docente a curso</asp:Panel>
                 <asp:Panel ID="pEliminarDocente" runat="server">Eliminar Docente</asp:Panel>
                 <asp:Panel ID="pAgregarCurso" runat="server">Agregar Curso</asp:Panel>
-                <asp:Panel ID="pMostrarCurso" runat="server" style="position: relative">Mostrar Curso<asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Horizontal">
-                    <Columns>
-                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                        <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
-                        <asp:BoundField DataField="FechaIn" HeaderText="FechaIn" SortExpression="FechaIn" />
-                        <asp:BoundField DataField="FechaFn" HeaderText="FechaFn" SortExpression="FechaFn" />
-                    </Columns>
-                    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-                    <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
-                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                    <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                    <SortedDescendingHeaderStyle BackColor="#242121" />
+                <asp:Panel ID="pMostrarCurso" runat="server" style="position: relative; text-align: center;">
+                    <span class="auto-style1"><strong>
+                    <br />
+                    </strong>Mostrar Curso<strong><br />
+                    <br />
+                    </strong></span>
+                    <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle">
+                        <Columns>
+                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                            <asp:BoundField DataField="Descripcion" HeaderText="Descripcion " SortExpression="Descripcion" />
+                            <asp:BoundField DataField="FechaIn" HeaderText="Fecha Inicial" SortExpression="FechaIn" />
+                            <asp:BoundField DataField="FechaFn" HeaderText="Fecha Final" SortExpression="FechaFn" />
+                        </Columns>
+                        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                        <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                        <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                        <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
                     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [Nombre], [Descripcion], [FechaIn], [FechaFn] FROM [Curso]"></asp:SqlDataSource>
                 </asp:Panel>
