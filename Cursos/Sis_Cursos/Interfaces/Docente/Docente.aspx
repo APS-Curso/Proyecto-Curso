@@ -21,6 +21,10 @@
         }
         .EstiloTitulo {
         }
+        .EstiloTitulo {
+        }
+        .EstiloTitulo {
+        }
     </style>
 </head>
 <body>
@@ -101,7 +105,28 @@
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [Nombre], [Apellido], [Correo] FROM [Usuarios]"></asp:SqlDataSource>
             </asp:Panel>
-            <asp:Panel ID="pEliminarEstudiante" runat="server">Eliminar Estudiante</asp:Panel>
+            <asp:Panel ID="pEliminarEstudiante" runat="server" style="text-align: center">
+                <br />
+                <span class="EstiloTitulo">Eliminar Estudiante<br /> </span>
+                <br />
+                <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource2" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle">
+                    <Columns>
+                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                        <asp:BoundField DataField="Apellido" HeaderText="Apellidos" SortExpression="Apellido" />
+                        <asp:BoundField DataField="Correo" HeaderText="Correo Electronico" SortExpression="Correo" />
+                        <asp:ButtonField ButtonType="Image" HeaderImageUrl="~/img/Eliminar.png" ImageUrl="~/img/Eliminar.png" Text="Botón" />
+                    </Columns>
+                    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                    <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                    <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                    <SortedDescendingHeaderStyle BackColor="#242121" />
+                </asp:GridView>
+                <br />
+            </asp:Panel>
             <asp:Panel ID="pMostrarCurso" runat="server" style="position: relative; text-align: center">
                 <span class="EstiloTitulo">
                 <br />
@@ -153,7 +178,30 @@
                     <SortedDescendingHeaderStyle BackColor="#242121" />
                 </asp:GridView>
             </asp:Panel>
-            <asp:Panel ID="pEliminarCurso" runat="server">Eliminar Curso</asp:Panel>
+            <asp:Panel ID="pEliminarCurso" runat="server" style="position: relative">
+                <div class="text-center">
+                    <br />
+                    <span class="EstiloTitulo">Eliminar Curso<br /> </span>
+                    <br />
+                </div>
+                <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle">
+                    <Columns>
+                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                        <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+                        <asp:BoundField DataField="FechaIn" HeaderText="Inicio" SortExpression="FechaIn" />
+                        <asp:BoundField DataField="FechaFn" HeaderText="Fin" SortExpression="FechaFn" />
+                        <asp:ButtonField ButtonType="Image" HeaderImageUrl="~/img/Eliminar.png" ImageUrl="~/img/Eliminar.png" />
+                    </Columns>
+                    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                    <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                    <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                    <SortedDescendingHeaderStyle BackColor="#242121" />
+                </asp:GridView>
+            </asp:Panel>
 	    </div>
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
