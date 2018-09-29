@@ -40,24 +40,24 @@
 	                       <a href="#EstudianteSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle-lm bg-dark">Estudiantes<i class="fas fa-caret-down"></i></a>
 	                       <ul class="collapse list-unstyled bg-dark" id="EstudianteSubmenu">
 	                           <li>
-	                               <asp:Button ID="btnMostrarEstudiantes" runat="server" Text="Mostrar" class="btnMenuLtr"/> 
+	                               <asp:Button ID="btnMostrarEstudiantes" runat="server" Text="Mostrar" class="btnMenuLtr" OnClick="btnMostrarEstudiantes_Click"/> 
 	                           </li>
 	                           <li>
-	                               <asp:Button ID="btnEliminarEstudiante" runat="server" Text="Eliminar" class="btnMenuLtr"/>
+	                               <asp:Button ID="btnEliminarEstudiante" runat="server" Text="Eliminar" class="btnMenuLtr" OnClick="btnEliminarEstudiante_Click"/>
 	                           </li>
 	                       </ul>
 	                   </li>
 	                   <li>
-	                       <a href="#CursosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle-lm bg-dark">Cursos<i class="fas fa-caret-down"></i></a>
+	                       <a href="#CursosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle-lm bg-dark">CursosCursos<i class="fas fa-caret-down"></i></a>
 	                       <ul class="collapse list-unstyled" id="CursosSubmenu">
 	                           <li>
-	                               <asp:Button ID="btnMostrarCursos" runat="server" Text="Mostrar" class="btnMenuLtr"/>
+	                               <asp:Button ID="btnMostrarCursos" runat="server" Text="Mostrar" class="btnMenuLtr" OnClick="btnMostrarCursos_Click"/>
 	                           </li>
 	                           <li>
-	                               <asp:Button ID="btnModificarCursos" runat="server" Text="Modificar" class="btnMenuLtr"/>
+	                               <asp:Button ID="btnModificarCursos" runat="server" Text="Modificar" class="btnMenuLtr" OnClick="btnModificarCursos_Click"/>
 	                           </li>
 	                           <li>
-	                               <asp:Button ID="btnEliminarCursos" runat="server" Text="Eliminar" class="btnMenuLtr"/>
+	                               <asp:Button ID="btnEliminarCursos" runat="server" Text="Eliminar" class="btnMenuLtr" OnClick="btnEliminarCursos_Click"/>
 	                           </li>
 	                        </ul>
 	                    </li>
@@ -66,8 +66,12 @@
 	        </div>
 	    </div>
         <div class="col-10 contenedor">
-
-	      </div>
+            <asp:Panel ID="pMostrarEstudiante" runat="server">Mostrar Estudiante</asp:Panel>
+            <asp:Panel ID="pEliminarEstudiante" runat="server">Eliminar Estudiante</asp:Panel>
+            <asp:Panel ID="pMostrarCurso" runat="server">Mostrar Curso</asp:Panel>
+            <asp:Panel ID="pModificarCurso" runat="server">Modificar Curso</asp:Panel>
+            <asp:Panel ID="pEliminarCurso" runat="server">Eliminar Curso</asp:Panel>
+	    </div>
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
