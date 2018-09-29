@@ -28,7 +28,7 @@
 		  </div>
 		</div>
 	</nav>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" class="row">
         <div class="row">
             <div class="col-2 bg-dark mside">
 	          <div id="sidebar" class="bg-dark nav flex-column nav-pills"role="tablist" aria-orientation="vertical">
@@ -40,10 +40,10 @@
 	                        <a href="#EstudianteSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle-lm bg-dark">Estudiantes<i class="fas fa-caret-down"></i></a>
 	                        <ul class="collapse list-unstyled bg-dark" id="EstudianteSubmenu">
 	                            <li>
-	                                <asp:Button ID="btnMostrarEstudiantes" runat="server" Text="Mostrar" class="btnMenuLtr"/>
+	                                <asp:Button ID="btnMostrarEstudiantes" runat="server" Text="Mostrar" class="btnMenuLtr" OnClick="btnMostrarEstudiantes_Click"/>
 	                            </li>
 	                            <li>
-	                                <asp:Button ID="btnEliminarEstudiante" runat="server" Text="Eliminar" class="btnMenuLtr"/>
+	                                <asp:Button ID="btnEliminarEstudiante" runat="server" Text="Eliminar" class="btnMenuLtr" OnClick="btnEliminarEstudiante_Click"/>
 	                            </li>
 	                        </ul>
 	                    </li>
@@ -51,33 +51,33 @@
 	                        <a href="#DocenteSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle-lm bg-dark">Docentes<i class="fas fa-caret-down"></i></a>
 	                        <ul class="collapse list-unstyled" id="DocenteSubmenu">
 	                            <li>
-	                                <asp:Button ID="btnAgregarDocente" runat="server" Text="Agregar" class="btnMenuLtr"/>
+	                                <asp:Button ID="btnAgregarDocente" runat="server" Text="Agregar" class="btnMenuLtr" OnClick="btnAgregarDocente_Click"/>
 	                            </li>
 	                            <li>
-	                                <asp:Button ID="btnMostrarDocente" runat="server" Text="Mostrar" class="btnMenuLtr"/>
+	                                <asp:Button ID="btnMostrarDocente" runat="server" Text="Mostrar" class="btnMenuLtr" OnClick="btnMostrarDocente_Click"/>
 	                            </li>
 	                            <li>
-	                                <asp:Button ID="btnAgregarDocenteCurso" runat="server" Text="Agregar a curso" class="btnMenuLtr"/>
+	                                <asp:Button ID="btnAgregarDocenteCurso" runat="server" Text="Agregar a curso" class="btnMenuLtr" OnClick="btnAgregarDocenteCurso_Click"/>
 	                            </li>
 	                            <li>
-	                                <asp:Button ID="btnEliminarDocente" runat="server" Text="Eliminar" class="btnMenuLtr"/>
+	                                <asp:Button ID="btnEliminarDocente" runat="server" Text="Eliminar" class="btnMenuLtr" OnClick="btnEliminarDocente_Click"/>
 	                            </li>
 	                        </ul>
 	                    </li>
 	                    <li>
-	                        <a href="#CursosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle-lm bg-dark">Cursos<i class="fas fa-caret-down"></i></a>
+	                        <a href="#CursosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle-lm bg-dark">CursosCursos<i class="fas fa-caret-down"></i></a>
 	                        <ul class="collapse list-unstyled" id="CursosSubmenu">
 	                            <li>
-	                                <asp:Button ID="btnAgregarCurso" runat="server" Text="Agregar" class="btnMenuLtr"/>
+	                                <asp:Button ID="btnAgregarCurso" runat="server" Text="Agregar" class="btnMenuLtr" OnClick="btnAgregarCurso_Click"/>
 	                            </li>
 	                            <li>
-	                                <asp:Button ID="btnMostrarCurso" runat="server" Text="Mostrar" class="btnMenuLtr"/>
+	                                <asp:Button ID="btnMostrarCurso" runat="server" Text="Mostrar" class="btnMenuLtr" OnClick="btnMostrarCurso_Click"/>
 	                            </li>
 	                            <li>
-	                                <asp:Button ID="btnModificarCurso" runat="server" Text="Modificar" class="btnMenuLtr"/>
+	                                <asp:Button ID="btnModificarCurso" runat="server" Text="Modificar" class="btnMenuLtr" OnClick="btnModificarCurso_Click"/>
 	                            </li>
 	                            <li>
-	                                <asp:Button ID="btnEliminarCurso" runat="server" Text="Eliminar" class="btnMenuLtr"/>
+	                                <asp:Button ID="btnEliminarCurso" runat="server" Text="Eliminar" class="btnMenuLtr" OnClick="btnEliminarCurso_Click"/>
 	                            </li>
 	                        </ul>
 	                    </li>
@@ -85,9 +85,21 @@
 	            </div>
 	        </div>
 	      </div>
-	      <div class="col-10 contenedor">
-
-	      </div>
+        <div class="col-10 contenedor">
+            <div class="tab-content" id="v-pills-tabContent">
+                <asp:Panel ID="pMostrarEstudiantes" runat="server">Mostrar Estudiantes</asp:Panel>
+                <asp:Panel ID="pEliminarEstudiante" runat="server">Eliminar Estudiantes</asp:Panel>
+                <asp:Panel ID="pAgregarDocente" runat="server">Agregar Docente</asp:Panel>
+                <asp:Panel ID="pMostrarDocente" runat="server">Mostrar Docente</asp:Panel>
+                <asp:Panel ID="pAgregarDocenteCurso" runat="server">Agregar Docente a curso</asp:Panel>
+                <asp:Panel ID="pEliminarDocente" runat="server">Eliminar Docente</asp:Panel>
+                <asp:Panel ID="pAgregarCurso" runat="server">Agregar Curso</asp:Panel>
+                <asp:Panel ID="pMostrarCurso" runat="server">Mostrar Curso</asp:Panel>
+                <asp:Panel ID="pModificarCurso" runat="server">Modificar Curso</asp:Panel>
+                <asp:Panel ID="pEliminarCurso" runat="server">Eliminar Curso</asp:Panel>
+            </div>
+	    </div>
+	      
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
