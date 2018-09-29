@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Entidades;
 using DatosSQL;
 using System.Data;
+using System.Net.Mail;
+using System.Net;
 
 namespace Negocios
 {
