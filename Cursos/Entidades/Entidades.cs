@@ -154,4 +154,48 @@ namespace Entidades
         }
         #endregion
     }
+
+    public class E_Email
+    {
+        #region Atributos
+        private string _From;
+        private string _Password;
+        private string _To;
+        private string _Msn;
+        #endregion
+
+        #region Constructor
+        public E_Email()
+        {
+            _From = string.Empty;
+            _Password = string.Empty;
+            _To = string.Empty;
+            _Msn = string.Empty;
+        }
+        #endregion
+
+        #region Encapsulamiento
+        public string From
+        {
+            get { return _From; }
+            set { _From = value; }
+        }
+        public string Password
+        {
+            get { return _Password; }
+            set { _Password = value; }
+        }
+        public string To
+        {
+            get { return _To; }
+            set { _To = value; }
+        }
+        public string Msn
+        {
+            get { return _Msn; }
+            set { _Msn = value; }
+        }
+        #endregion
+
+    }
 }
