@@ -15,7 +15,7 @@ namespace Entidades
         private string _Nombre;
         private string _Apellido;
         private string _Correo;
-        private string _PasswordUsuario;
+        private string _Pass;
         #endregion
 
         #region Constructor
@@ -27,7 +27,7 @@ namespace Entidades
             _Nombre = string.Empty;
             _Apellido = string.Empty;
             _Correo = string.Empty;
-            _PasswordUsuario = string.Empty;
+            _Pass = string.Empty;
         }
         #endregion
 
@@ -62,10 +62,10 @@ namespace Entidades
             get { return _Correo; }
             set { _Correo = value; }
         }
-        public string PasswordUsuario
+        public string Pass
         {
-            get { return _PasswordUsuario; }
-            set { _PasswordUsuario = value; }
+            get { return _Pass; }
+            set { _Pass = value; }
         }
         #endregion
     }
