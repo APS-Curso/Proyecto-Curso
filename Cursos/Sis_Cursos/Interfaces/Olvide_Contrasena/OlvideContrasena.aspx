@@ -50,11 +50,11 @@
                     <p>Elige una nueva contraseña</p>
                 </div>
                 <div class="form-label-group">
-                    <asp:TextBox ID="inputPassword" runat="server" class="form-control" placeholder="Nueva Contraseña"></asp:TextBox>
+                    <asp:TextBox ID="inputPassword" runat="server" class="form-control" placeholder="Nueva Contraseña" type="password"></asp:TextBox>
                     <label for="inputPassword">Nueva Contraseña</label>
                 </div>
                 <div class="form-label-group">
-                    <asp:TextBox ID="tbConfirmarContra" runat="server" class="form-control" placeholder="Confirmar"></asp:TextBox>
+                    <asp:TextBox ID="tbConfirmarContra" runat="server" class="form-control" placeholder="Confirmar" type="password"></asp:TextBox>
                     <label for="tbConfirmarContra">Confirmar</label>
                 </div>
                 <asp:Button ID="btnCambiar" runat="server" class="btn btn-lg btn-primary btn-block" Text="Cambiar" OnClick="btnCambiar_Click" />
