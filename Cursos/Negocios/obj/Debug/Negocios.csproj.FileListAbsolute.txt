@@ -26,3 +26,13 @@ C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Negocio
 C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Negocios\bin\Debug\Entidades.dll
 C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Negocios\bin\Debug\Entidades.pdb
 C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+C:\Users\santiago\Desktop\Proyecto-Curso\Cursos\Negocios\bin\Debug\Negocios.dll
+C:\Users\santiago\Desktop\Proyecto-Curso\Cursos\Negocios\bin\Debug\Negocios.pdb
+C:\Users\santiago\Desktop\Proyecto-Curso\Cursos\Negocios\bin\Debug\DatosSQL.dll
+C:\Users\santiago\Desktop\Proyecto-Curso\Cursos\Negocios\bin\Debug\Entidades.dll
+C:\Users\santiago\Desktop\Proyecto-Curso\Cursos\Negocios\bin\Debug\Entidades.pdb
+C:\Users\santiago\Desktop\Proyecto-Curso\Cursos\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache
+C:\Users\santiago\Desktop\Proyecto-Curso\Cursos\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\santiago\Desktop\Proyecto-Curso\Cursos\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+C:\Users\santiago\Desktop\Proyecto-Curso\Cursos\Negocios\obj\Debug\Negocios.dll
+C:\Users\santiago\Desktop\Proyecto-Curso\Cursos\Negocios\obj\Debug\Negocios.pdb

@@ -85,7 +85,7 @@ namespace Negocios
     {
         D_IBM_Datos ObjIBM = new D_IBM_Datos();
         D_Listados ObjLst = new D_Listados();
-        private string Sp = "IBM_Rol";
+        private string Sp = "IBE_Rol";
 
         #region INSERTAR, BORRAR y MODIFICAR
         // Acciones de Insertar, Borrar y Modificar los datos del Rol
