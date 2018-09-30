@@ -25,14 +25,14 @@
              </div>
 
              <div class="form-label-group">
-                <asp:TextBox ID="inputPassword" runat="server" class="form-control" placeholder="Contraseña"></asp:TextBox>
+                <asp:TextBox ID="inputPassword" runat="server" class="form-control" placeholder="Contraseña" type="password"></asp:TextBox>
                 <label for="inputPassword">Contraseña</label>
              </div>
             <div id="enlaces">
                  <div class="enlaces"><asp:HyperLink ID="hplOlvideContrasena" runat="server" NavigateUrl="~/Interfaces/Olvide_Contrasena/OlvideContrasena.aspx">Olvide mi contraseña</asp:HyperLink></div>
                 <div class="enlaces"><!--<button type="button" class="btn btn-outline-primary">Registrarse</button>--> <asp:Button ID="btnRegistrarse" runat="server" class="btn btn-outline-primary" Text="Registrarse" /></div>
             </div>
-            <asp:Button ID="btnInicio" runat="server" class="btn btn-lg btn-primary btn-block" Text="Iniciar Sesión" />
+            <asp:Button ID="btnInicio" runat="server" class="btn btn-lg btn-primary btn-block" Text="Iniciar Sesión" OnClick="btnInicio_Click" />
         </div>
     </form>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
