@@ -27,9 +27,9 @@ namespace Negocios
             return ObjIBM.IBM_Entidad<E_Usuario>(Sp, pEntidades);
         }
 
-        public string BorrarUsuario(int pIdUsuario, string pPass)
+        public string BorrarUsuario(int pIdUsuario)
         {
-            E_Usuario Entidad = new E_Usuario { Accion = "BORRAR", IdUsuario = pIdUsuario, PasswordUsuario = pPass};
+            E_Usuario Entidad = new E_Usuario { Accion = "BORRAR", IdUsuario = pIdUsuario };
             return ObjIBM.IBM_Entidad<E_Usuario>(Sp, Entidad);
         }
 
@@ -44,7 +44,7 @@ namespace Negocios
         // Listado generales de Usuarios en dormato DateTable y List<E_Sistema>
         public DataTable GetDT_Usuarios()
         {
-            return ObjLst.DT_ListadoGeneral("Usuarios","IdUsuario, Apellido, Nombre, Correo,Pass,Usuario");
+            return ObjLst.DT_ListadoGeneral("Usuarios", "IdUsuario, Apellido");
         }
 
         public List<E_Usuario> LstUsuario()
@@ -60,9 +60,9 @@ namespace Negocios
             return (from User in LstUsuario() where User.IdUsuario == pIdUsuario select User).FirstOrDefault();
         }
 
-        public E_Usuario BuscarUsuarioPorEmail(string pEmail)
+        public E_Usuario BuscarUsuarioPorCorreo(string pCorreo)
         {
-            return (from User in LstUsuario() where User.Correo == pEmail select User).FirstOrDefault();
+            return (from User in LstUsuario() where User.Correo == pCorreo select User).FirstOrDefault();
         }
 
         public E_Usuario BuscarUsuarioPorUsuario(string pUsuaruio)
@@ -72,8 +72,8 @@ namespace Negocios
 
         public int ValidaLogin(string pUsuario, string pPassword)
         {
-            if ((from User in LstUsuario() where User.Usuario == pUsuario && User.PasswordUsuario == pPassword select User).FirstOrDefault() != null) /*&&
-                (from User in LstUsuario() where User.PasswordUsuario == pPassword select User).FirstOrDefault() != null)*/
+            if ((from User in LstUsuario() where User.Usuario == pUsuario && User.Pass == pPassword select User).FirstOrDefault() != null) /*&&
+                (from User in LstUsuario() where User.Pass == pPassword select User).FirstOrDefault() != null)*/
                 return 1;
             return -1;
         }
