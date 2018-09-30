@@ -17,7 +17,7 @@ namespace Negocios
     {
         D_IBM_Datos ObjIBM = new D_IBM_Datos();
         D_Listados ObjLst = new D_Listados();
-        private string Sp = "IBM_Usuarios";
+        private string Sp = "IBE_Usuarios";
 
         #region INSERTAR, BORRAR y MODIFICAR
         // Acciones de Insertar, Borrar y Modificar los datos del Usuario
@@ -27,9 +27,9 @@ namespace Negocios
             return ObjIBM.IBM_Entidad<E_Usuario>(Sp, pEntidades);
         }
 
-        public string BorrarUsuario(int pIdUsuario)
+        public string BorrarUsuario(int pIdUsuario, string pPass)
         {
-            E_Usuario Entidad = new E_Usuario { Accion = "BORRAR", IdUsuario = pIdUsuario };
+            E_Usuario Entidad = new E_Usuario { Accion = "BORRAR", IdUsuario = pIdUsuario, PasswordUsuario = pPass};
             return ObjIBM.IBM_Entidad<E_Usuario>(Sp, Entidad);
         }
 
@@ -44,7 +44,7 @@ namespace Negocios
         // Listado generales de Usuarios en dormato DateTable y List<E_Sistema>
         public DataTable GetDT_Usuarios()
         {
-            return ObjLst.DT_ListadoGeneral("tbUsuarios", "Apellidos, Nombres");
+            return ObjLst.DT_ListadoGeneral("Usuarios","IdUsuario, Apellido, Nombre, Correo,Pass,Usuario");
         }
 
         public List<E_Usuario> LstUsuario()
@@ -62,7 +62,7 @@ namespace Negocios
 
         public E_Usuario BuscarUsuarioPorEmail(string pEmail)
         {
-            return (from User in LstUsuario() where User.Email == pEmail select User).FirstOrDefault();
+            return (from User in LstUsuario() where User.Correo == pEmail select User).FirstOrDefault();
         }
 
         public E_Usuario BuscarUsuarioPorUsuario(string pUsuaruio)
@@ -112,7 +112,7 @@ namespace Negocios
         // Listado generales de Rols en dormato DateTable y List<E_Sistema>
         public DataTable GetDT_Rol()
         {
-            return ObjLst.DT_ListadoGeneral("tbRoles", "NombreRol");
+            return ObjLst.DT_ListadoGeneral("Rol", "NombreRol, IdRol");
         }
 
         public List<E_Rol> LstRol()
@@ -134,7 +134,7 @@ namespace Negocios
     {
         D_IBM_Datos ObjIBM = new D_IBM_Datos();
         D_Listados ObjLst = new D_Listados();
-        private string Sp = "IBM_UsuarioRol";
+        private string Sp = "IBE_UsuarioRol";
 
         #region INSERTAR, BORRAR y MODIFICAR
         // Acciones de Insertar, Borrar y Modificar los datos del Rol
@@ -161,7 +161,7 @@ namespace Negocios
         // Listado generales de Rols en dormato DateTable y List<E_Sistema>
         public DataTable GetDT_UsuarioRol()
         {
-            return ObjLst.DT_ListadoGeneral("tbUsuarioRol", "IdRol");
+            return ObjLst.DT_ListadoGeneral("UsuarioRol", "IdUsuario, IdRol");
         }
 
         public List<E_UsuarioRol> LstUsuarioRol()
@@ -179,6 +179,115 @@ namespace Negocios
         public E_UsuarioRol BuscarUsuarioRolPorIdUsuario(int pIdUsuario)
         {
             return (from User in LstUsuarioRol() where User.IdUsuario == pIdUsuario select User).FirstOrDefault();
+        }
+        #endregion
+    }
+
+    public class N_Cursos
+    {
+        D_IBM_Datos ObjIBM = new D_IBM_Datos();
+        D_Listados ObjLst = new D_Listados();
+        private string Sp = "IBE_Cursos";
+
+        #region INSERTAR, BORRAR y MODIFICAR
+        // Acciones de Insertar, Borrar y Modificar los datos del Curso
+        public string InsertarCurso(E_Curso pEntidades)
+        {
+            pEntidades.Accion = "INSERTAR";
+            return ObjIBM.IBM_Entidad<E_Curso>(Sp, pEntidades);
+        }
+
+        public string BorrarCurso(int pIdCurso)
+        {
+            E_Curso Entidad = new E_Curso { Accion = "BORRAR", IdCurso = pIdCurso };
+            return ObjIBM.IBM_Entidad<E_Curso>(Sp, Entidad);
+        }
+
+        public string ModificarCurso(E_Curso pEntidades)
+        {
+            pEntidades.Accion = "MODIFICAR";
+            return ObjIBM.IBM_Entidad<E_Curso>(Sp, pEntidades);
+        }
+        #endregion
+
+        #region Listados generales de Curso
+        // Listado generales de Usuarios en dormato DateTable y List<E_Sistema>
+        public DataTable GetDT_Curso()
+        {
+            return ObjLst.DT_ListadoGeneral("Curso", "IdCurso, Nombre");
+        }
+
+        public List<E_Curso> LstCurso()
+        {
+            return D_ConvierteDatos.ConvertirDTALista<E_Curso>(GetDT_Curso());
+        }
+        #endregion
+
+        #region Busquedad de Cursos
+        // Busqueda de usuario por diferente Criterio
+        public E_Curso BuscarCursoPorId(int pIdCurso)
+        {
+            return (from Curso in LstCurso() where Curso.IdCurso == pIdCurso select Curso).FirstOrDefault();
+        }
+
+
+        public E_Curso BuscarCursoPorNombre(string pNCurso)
+        {
+            return (from Curso in LstCurso() where Curso.Nombre == pNCurso select Curso).FirstOrDefault();
+        }
+        #endregion
+
+    }
+
+    public class N_UsuarioCurso
+    {
+        D_IBM_Datos ObjIBM = new D_IBM_Datos();
+        D_Listados ObjLst = new D_Listados();
+        private string Sp = "IBE_UsuarioCurso";
+
+        #region INSERTAR, BORRAR y MODIFICAR
+        // Acciones de Insertar, Borrar y Modificar los datos del UsuarioCurso
+        public string InsertarUsuarioCurso(E_UsuarioCurso pEntidades)
+        {
+            pEntidades.Accion = "INSERTAR";
+            return ObjIBM.IBM_Entidad<E_UsuarioCurso>(Sp, pEntidades);
+        }
+
+        public string BorrarUsuarioCurso(int pIdCurso, int pIdUsuario)
+        {
+            E_UsuarioCurso Entidad = new E_UsuarioCurso { Accion = "BORRAR", IdCurso = pIdCurso, IdUsuario = pIdUsuario };
+            return ObjIBM.IBM_Entidad<E_UsuarioCurso>(Sp, Entidad);
+        }
+
+        public string ModificarUsuarioCurso(E_UsuarioCurso pEntidades)
+        {
+            pEntidades.Accion = "MODIFICAR";
+            return ObjIBM.IBM_Entidad<E_UsuarioCurso>(Sp, pEntidades);
+        }
+        #endregion
+
+        #region Listados generales de UsuarioCurso
+        // Listado generales de Rols en dormato DateTable y List<E_Sistema>
+        public DataTable GetDT_UsuarioCurso()
+        {
+            return ObjLst.DT_ListadoGeneral("UsuarioCurso", "IdCurso, IdUsuario");
+        }
+
+        public List<E_UsuarioCurso> LstUsuarioCurso()
+        {
+            return D_ConvierteDatos.ConvertirDTALista<E_UsuarioCurso>(GetDT_UsuarioCurso());
+        }
+        #endregion
+
+        #region Busquedad de Usuario-Curso
+        // Busqueda de Rol por diferente Criterio
+        public E_UsuarioCurso BuscarCursoPorIdCurso(int pIdCurso)
+        {
+            return (from User in LstUsuarioCurso() where User.IdCurso == pIdCurso select User).FirstOrDefault();
+        }
+        public E_UsuarioCurso BuscarUsuarioCursoPorIdUsuario(int pIdUsuario)
+        {
+            return (from User in LstUsuarioCurso() where User.IdUsuario == pIdUsuario select User).FirstOrDefault();
         }
         #endregion
     }

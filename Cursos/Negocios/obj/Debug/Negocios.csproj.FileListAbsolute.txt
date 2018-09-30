@@ -17,3 +17,12 @@ C:\Users\santiago\Desktop\Cursos\Negocios\obj\Debug\Negocios.csproj.CoreCompileI
 C:\Users\santiago\Desktop\Cursos\Negocios\obj\Debug\Negocios.csproj.CopyComplete
 C:\Users\santiago\Desktop\Cursos\Negocios\obj\Debug\Negocios.dll
 C:\Users\santiago\Desktop\Cursos\Negocios\obj\Debug\Negocios.pdb
+C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Negocios\obj\Debug\Negocios.csprojAssemblyReference.cache
+C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Negocios\obj\Debug\Negocios.dll
+C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Negocios\obj\Debug\Negocios.pdb
+C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Negocios\bin\Debug\Negocios.dll
+C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Negocios\bin\Debug\Negocios.pdb
+C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Negocios\bin\Debug\Entidades.dll
+C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Negocios\bin\Debug\Entidades.pdb
+C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Negocios\obj\Debug\Negocios.csproj.CopyComplete

@@ -22,15 +22,6 @@ namespace Sis_Cursos.Interfaces.Administrador {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// btnAgregarEstudiante control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregarEstudiante;
-        
-        /// <summary>
         /// btnMostrarEstudiantes control.
         /// </summary>
         /// <remarks>
@@ -121,15 +112,6 @@ namespace Sis_Cursos.Interfaces.Administrador {
         protected global::System.Web.UI.WebControls.Button btnEliminarCurso;
         
         /// <summary>
-        /// pAgregarEstudiante control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pAgregarEstudiante;
-        
-        /// <summary>
         /// pMostrarEstudiantes control.
         /// </summary>
         /// <remarks>
@@ -139,13 +121,13 @@ namespace Sis_Cursos.Interfaces.Administrador {
         protected global::System.Web.UI.WebControls.Panel pMostrarEstudiantes;
         
         /// <summary>
-        /// GridView1 control.
+        /// Grid_Estudiantes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView Grid_Estudiantes;
         
         /// <summary>
         /// SqlDataSource1 control.
@@ -166,13 +148,13 @@ namespace Sis_Cursos.Interfaces.Administrador {
         protected global::System.Web.UI.WebControls.Panel pEliminarEstudiante;
         
         /// <summary>
-        /// GridView5 control.
+        /// Grid_Estudiantes_D control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView5;
+        protected global::System.Web.UI.WebControls.GridView Grid_Estudiantes_D;
         
         /// <summary>
         /// pAgregarDocente control.
@@ -202,15 +184,6 @@ namespace Sis_Cursos.Interfaces.Administrador {
         protected global::System.Web.UI.WebControls.GridView GridView2;
         
         /// <summary>
-        /// SqlDataSource2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
-        
-        /// <summary>
         /// pAgregarDocenteCurso control.
         /// </summary>
         /// <remarks>
@@ -229,13 +202,13 @@ namespace Sis_Cursos.Interfaces.Administrador {
         protected global::System.Web.UI.WebControls.Panel pEliminarDocente;
         
         /// <summary>
-        /// GridView6 control.
+        /// Grid_Docentes_D control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView6;
+        protected global::System.Web.UI.WebControls.GridView Grid_Docentes_D;
         
         /// <summary>
         /// pAgregarCurso control.
@@ -256,22 +229,22 @@ namespace Sis_Cursos.Interfaces.Administrador {
         protected global::System.Web.UI.WebControls.Panel pMostrarCurso;
         
         /// <summary>
-        /// GridView3 control.
+        /// Grid_Cursos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView3;
+        protected global::System.Web.UI.WebControls.GridView Grid_Cursos;
         
         /// <summary>
-        /// SqlDataSource3 control.
+        /// sqlcursos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlcursos;
         
         /// <summary>
         /// pModificarCurso control.
@@ -283,22 +256,13 @@ namespace Sis_Cursos.Interfaces.Administrador {
         protected global::System.Web.UI.WebControls.Panel pModificarCurso;
         
         /// <summary>
-        /// GridView4 control.
+        /// Grid_CursosE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView4;
-        
-        /// <summary>
-        /// SqlDataSource4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource4;
+        protected global::System.Web.UI.WebControls.GridView Grid_CursosE;
         
         /// <summary>
         /// pEliminarCurso control.
@@ -310,12 +274,12 @@ namespace Sis_Cursos.Interfaces.Administrador {
         protected global::System.Web.UI.WebControls.Panel pEliminarCurso;
         
         /// <summary>
-        /// GridView7 control.
+        /// Grid_CursosD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView7;
+        protected global::System.Web.UI.WebControls.GridView Grid_CursosD;
     }
 }

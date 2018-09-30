@@ -12,9 +12,9 @@ namespace Entidades
         private string _Accion;
         private int _IdUsuario;
         private string _Usuario;
-        private string _Nombres;
-        private string _Apellidos;
-        private string _Email;
+        private string _Nombre;
+        private string _Apellido;
+        private string _Correo;
         private string _PasswordUsuario;
         #endregion
 
@@ -24,9 +24,9 @@ namespace Entidades
             _Accion = string.Empty;
             _IdUsuario = 0;
             _Usuario = string.Empty;
-            _Nombres = string.Empty;
-            _Apellidos = string.Empty;
-            _Email = string.Empty;
+            _Nombre = string.Empty;
+            _Apellido = string.Empty;
+            _Correo = string.Empty;
             _PasswordUsuario = string.Empty;
         }
         #endregion
@@ -47,20 +47,20 @@ namespace Entidades
             get { return _IdUsuario; }
             set { _IdUsuario = value; }
         }
-        public string Nombres
+        public string Nombre
         {
-            get { return _Nombres; }
-            set { _Nombres = value; }
+            get { return _Nombre; }
+            set { _Nombre = value; }
         }
-        public string Apellidos
+        public string Apellido
         {
-            get { return _Apellidos; }
-            set { _Apellidos = value; }
+            get { return _Apellido; }
+            set { _Apellido = value; }
         }
-        public string Email
+        public string Correo
         {
-            get { return _Email; }
-            set { _Email = value; }
+            get { return _Correo; }
+            set { _Correo = value; }
         }
         public string PasswordUsuario
         {
@@ -151,6 +151,102 @@ namespace Entidades
         {
             get { return _IdRol; }
             set { _IdRol = value; }
+        }
+        #endregion
+    }
+
+    public class E_Curso
+    {
+        #region Atributos
+        private string _Accion;
+        private int _IdCurso;
+        private string _Nombre;
+        private string _Descripcion;
+        private string _FechaInicio;
+        private string _FechaFin;
+        #endregion
+
+        #region Constructor
+        public E_Curso()
+        {
+            _Accion = string.Empty;
+            _IdCurso = 0;
+            _Nombre = string.Empty;
+            _Descripcion = string.Empty;
+            _FechaInicio = string.Empty;
+            _FechaFin = string.Empty;
+        }
+        #endregion
+
+        #region Encapsulamiento
+        public string Accion
+        {
+            get { return _Accion; }
+            set { _Accion = value; }
+        }
+        public int IdCurso
+        {
+            get { return _IdCurso; }
+            set { _IdCurso = value; }
+        }
+        public string Nombre
+        {
+            get { return _Nombre; }
+            set { _Nombre = value; }
+        }
+        public string Descripcion
+        {
+            get { return _Descripcion; }
+            set { _Descripcion = value; }
+        }
+        public string FechaInicio
+        {
+            get { return _FechaInicio; }
+            set { _FechaInicio = value; }
+        }
+        public string FechaFin
+        {
+            get { return _FechaFin; }
+            set { _FechaFin = value; }
+        }
+        #endregion
+    }
+
+    public class E_UsuarioCurso
+    {
+        #region Atributos
+        private string _Accion;
+        private int _IdUsuario;
+        private int _IdCurso;
+        #endregion
+
+        #region Constructor
+        public E_UsuarioCurso()
+        {
+            _Accion = string.Empty;
+            _IdUsuario = 0;
+            _IdCurso = 0;
+        }
+        #endregion
+
+        #region Encampsulamiento
+
+        public string Accion
+        {
+            get { return _Accion; }
+            set { _Accion = value; }
+        }
+
+        public int IdUsuario
+        {
+            get { return _IdUsuario; }
+            set { _IdUsuario = value; }
+        }
+
+        public int IdCurso
+        {
+            get { return _IdCurso; }
+            set { _IdCurso = value; }
         }
         #endregion
     }

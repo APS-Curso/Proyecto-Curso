@@ -10,3 +10,9 @@ C:\Users\santiago\Desktop\Cursos\Entidades\obj\Debug\Entidades.csprojResolveAsse
 C:\Users\santiago\Desktop\Cursos\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\santiago\Desktop\Cursos\Entidades\obj\Debug\Entidades.dll
 C:\Users\santiago\Desktop\Cursos\Entidades\obj\Debug\Entidades.pdb
+C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Entidades\bin\Debug\Entidades.dll
+C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Entidades\bin\Debug\Entidades.pdb
+C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Entidades\obj\Debug\Entidades.dll
+C:\Users\LENOVO-Y300\Desktop\New folder (2)\Proyecto-Curso-master\Cursos\Entidades\obj\Debug\Entidades.pdb

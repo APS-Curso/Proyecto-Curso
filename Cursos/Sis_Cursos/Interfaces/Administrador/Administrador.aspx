@@ -29,12 +29,6 @@
         }
         .EstiloTitulo {
         }
-        .EstiloTitulo {
-        }
-        .EstiloTitulo {
-        }
-        .EstiloTitulo {
-        }
     </style>
 </head>
 <body>
@@ -65,9 +59,6 @@
 	                    <li class="active">
 	                        <a href="#EstudianteSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle-lm bg-dark">Estudiantes<i class="fas fa-caret-down"></i></a>
 	                        <ul class="collapse list-unstyled bg-dark" id="EstudianteSubmenu">
-                                <li>
-	                                <asp:Button ID="btnAgregarEstudiante" runat="server" Text="Agregar" class="btnMenuLtr" OnClick="btnAgregarEstudiante_Click"/>
-	                            </li>
 	                            <li>
 	                                <asp:Button ID="btnMostrarEstudiantes" runat="server" Text="Mostrar" class="btnMenuLtr" OnClick="btnMostrarEstudiantes_Click"/>
 	                            </li>
@@ -94,7 +85,7 @@
 	                        </ul>
 	                    </li>
 	                    <li>
-	                        <a href="#CursosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle-lm bg-dark">Cursos<i class="fas fa-caret-down"></i></a>
+	                        <a href="#CursosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle-lm bg-dark">Cursos</a>
 	                        <ul class="collapse list-unstyled" id="CursosSubmenu">
 	                            <li>
 	                                <asp:Button ID="btnAgregarCurso" runat="server" Text="Agregar" class="btnMenuLtr" OnClick="btnAgregarCurso_Click"/>
@@ -116,50 +107,17 @@
 	      </div>
         <div class="col-10 contenedor">
             <div class="tab-content" id="v-pills-tabContent">
-                <asp:Panel ID="pAgregarEstudiante" runat="server">
-                    <div class="col-8 contenedor">
-                      <br />
-                        <form>
-                          <div class="form-row">
-                            <div class="col">
-                                <label for="NombreEstudiante">Nombre</label>                                                  
-                                <input type="text" class="form-control" id="NombreEstudiante"placeholder="Nombre"/>
-                            </div>
-                            <div class="col">
-                                <label for="ApellidoEstudiante">Apellido</label>
-                                <input type="text" class="form-control" id="ApellidoEstudiante" placeholder="Apellido"/>
-                            </div>
-                          </div>
-                          <div class="form-row">
-                            <div class="form-group col-md-6">
-                              <label for="Correo">Correo</label>
-                              <input type="email" class="form-control" id="CorreoEstudiante" placeholder="Correo"/>
-                            </div>
-                            <div class="form-group col-md-6">
-                              <label for="ContraseñaEstudiante">Contraseña</label>
-                              <input type="password" class="form-control" id="ContraseñaEstudiante" placeholder="Contraseña"/>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="UsuarioEstudiante">Usuario</label>
-                            <textarea class="form-control" id="UsuarioEstudiante" rows="1"></textarea>
-                          </div>
-                        </form>
-                          <br />
-                           <button class="btn btn-primary" type="submit">Agregar</button>
-	                  </div>
-                </asp:Panel>
                 <asp:Panel ID="pMostrarEstudiantes" runat="server" style="position: relative; text-align: center">
                     <strong>
                     <br />
                     </strong>&nbsp;<span class="EstiloTitulo">Mostrar Estudiantes</span><strong><br />
                     <br />
                     </strong>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle">
+                    <asp:GridView ID="Grid_Estudiantes" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle">
                         <Columns>
-                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                            <asp:BoundField DataField="Apellido" HeaderText="Apellidos" SortExpression="Apellido" />
-                            <asp:BoundField DataField="Correo" HeaderText="Correo Electronico" SortExpression="Correo" />
+                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
+                            <asp:BoundField DataField="Correo" HeaderText="Email" />
                         </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -170,18 +128,15 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [Nombre], [Apellido], [Correo], [Pass] FROM [Usuarios]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [Nombres], [Apellidos], [Correo] FROM [tbUsuarios]"></asp:SqlDataSource>
                 </asp:Panel>
-                <asp:Panel ID="pEliminarEstudiante" runat="server" style="position: relative; text-align: center">
-                    <br />
-                    <span class="EstiloTitulo">Eliminar Estudiantes</span><br />
-                    <br />
-                    <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle">
+                <asp:Panel ID="pEliminarEstudiante" runat="server">Eliminar Estudiantes<br />
+                    <asp:GridView ID="Grid_Estudiantes_D" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " Height="200px" HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle" Width="243px" DataKeyNames="IdUsuario" OnSelectedIndexChanged="Grid_Estudiantes_D_SelectedIndexChanged">
                         <Columns>
-                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                            <asp:BoundField DataField="Apellido" HeaderText="Apellidos" SortExpression="Apellido" />
-                            <asp:BoundField DataField="Correo" HeaderText="Correo Electronico" SortExpression="Correo" />
-                            <asp:ButtonField ButtonType="Image" HeaderImageUrl="~/img/Eliminar.png" ImageUrl="~/img/Eliminar.png" Text="Botón" />
+                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
+                            <asp:BoundField DataField="Correo" HeaderText="Correo" />
+                            <asp:CommandField ButtonType="Image" HeaderImageUrl="~/img/trash.png" SelectImageUrl="~/img/trash.png" ShowSelectButton="True" />
                         </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -192,53 +147,19 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
-                    <br />
-                    <br />
                 </asp:Panel>
-                <asp:Panel ID="pAgregarDocente" runat="server">
-                    <div class="col-8 contenedor">
-                      <br />
-                        <form>
-                          <div class="form-row">
-                            <div class="col">
-                                <label for="NombreDocente">Nombre</label>                                                  
-                                <input type="text" class="form-control" id="NombreDocente" placeholder="Nombre"/>
-                            </div>
-                            <div class="col">
-                                <label for="ApellidoDocente">Apellido</label>
-                                <input type="text" class="form-control" id="ApellidoDocente" placeholder="Apellido"/>
-                            </div>
-                          </div>
-                          <div class="form-row">
-                            <div class="form-group col-md-6">
-                              <label for="CorreoDocente">Correo</label>
-                              <input type="email" class="form-control" id="CorreoDocente" placeholder="Correo"/>
-                            </div>
-                            <div class="form-group col-md-6">
-                              <label for="ContraseñaDocente">Contraseña</label>
-                              <input type="password" class="form-control" id="ContraseñaDocente" placeholder="Contraseña"/>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="UsuarioDocente">Usuario</label>
-                            <textarea class="form-control" id="UsuarioDocente" rows="1"></textarea>
-                          </div>
-                        </form>
-                          <br />
-                           <button class="btn btn-primary" type="submit">Agregar</button>
-	                  </div>
-                </asp:Panel>
+                <asp:Panel ID="pAgregarDocente" runat="server">Agregar Docente</asp:Panel>
                 <asp:Panel ID="pMostrarDocente" runat="server" style="position: relative; text-align: center;">
                     <span class="EstiloTitulo">
                     <br />
                     &nbsp;Mostrar Docente<br />
                     <br />
                     </span>
-                    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle">
+                    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle" Height="200px" Width="243px">
                         <Columns>
-                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                            <asp:BoundField DataField="Apellido" HeaderText="Apellidos" SortExpression="Apellido" />
-                            <asp:BoundField DataField="Correo" HeaderText="Correo Electronico" SortExpression="Correo" />
+                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
+                            <asp:BoundField DataField="Correo" HeaderText="Correo" />
                         </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -249,19 +170,15 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [Nombre], [Apellido], [Correo] FROM [Usuarios]"></asp:SqlDataSource>
                 </asp:Panel>
                 <asp:Panel ID="pAgregarDocenteCurso" runat="server">Agregar Docente a curso</asp:Panel>
-                <asp:Panel ID="pEliminarDocente" runat="server" style="position: relative; text-align: center">
-                    <br />
-                    <span class="EstiloTitulo">Eliminar Docente</span><br />
-                    <br />
-                    <asp:GridView ID="GridView6" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle">
+                <asp:Panel ID="pEliminarDocente" runat="server">Eliminar Docente<br />
+                    <asp:GridView ID="Grid_Docentes_D" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " Height="200px" HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle" Width="243px" DataKeyNames="IdUsuario" OnSelectedIndexChanged="Grid_Docentes_D_SelectedIndexChanged">
                         <Columns>
-                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                            <asp:BoundField DataField="Apellido" HeaderText="Apellidos" SortExpression="Apellido" />
-                            <asp:BoundField DataField="Correo" HeaderText="Correo Electronico" SortExpression="Correo" />
-                            <asp:ButtonField ButtonType="Image" HeaderImageUrl="~/img/Eliminar.png" ImageUrl="~/img/Eliminar.png" Text="Botón" />
+                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
+                            <asp:BoundField DataField="Correo" HeaderText="Correo" />
+                            <asp:CommandField ButtonType="Image" HeaderImageUrl="~/img/trash.png" CausesValidation="False" InsertVisible="False" SelectImageUrl="~/img/trash.png" ShowCancelButton="False" ShowSelectButton="True" />
                         </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -272,49 +189,20 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
-                    <br />
                 </asp:Panel>
-                <asp:Panel ID="pAgregarCurso" runat="server">
-                    <div class="col-8 contenedor">
-                      <br />
-                      <form>
-                          <div class="form-group">
-                            <label for="NombreCurso">Nombre</label>
-                            <textarea class="form-control" id="NombreCurso" rows="1"></textarea>
-                          </div>
-                          <div class="form-group">
-                            <label for="DescripcionCurso">Descripción</label>
-                            <textarea class="form-control" id="DescripcionCurso" rows="3"></textarea>
-                          </div>
-                        </form>
-                      <form>
-                          <div class="row">
-                            <div class="col">
-                              <label for="FechaInicio">Fecha Inicio</label>
-                              <input type="date" class="form-control" id="FechaInicio"/>
-                            </div>
-                            <div class="col">
-                              <label for="FechaFin">Fecha Fin</label>
-                              <input type="date" class="form-control" id="FechaFin"/>
-                            </div>
-                          </div>
-                        </form>
-                      <br />
-                       <button class="btn btn-primary" type="submit">Agregar</button>
-	              </div>
-                </asp:Panel>
+                <asp:Panel ID="pAgregarCurso" runat="server">Agregar Curso</asp:Panel>
                 <asp:Panel ID="pMostrarCurso" runat="server" style="position: relative; text-align: center;">
                     <span class="auto-style1"><strong>
                     <br />
                     </strong>Mostrar Curso<strong><br />
                     <br />
                     </strong></span>
-                    <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle">
+                    <asp:GridView ID="Grid_Cursos" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="sqlcursos" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle">
                         <Columns>
                             <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                            <asp:BoundField DataField="Descripcion" HeaderText="Descripcion " SortExpression="Descripcion" />
-                            <asp:BoundField DataField="FechaIn" HeaderText="Inicio" SortExpression="FechaIn" />
-                            <asp:BoundField DataField="FechaFn" HeaderText="Fin" SortExpression="FechaFn" />
+                            <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+                            <asp:BoundField DataField="FechaIn" HeaderText="Fecha Inicio" SortExpression="FechaIn" />
+                            <asp:BoundField DataField="FechaFn" HeaderText="Fecha Fin" SortExpression="FechaFn" />
                         </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -325,7 +213,7 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [Nombre], [Descripcion], [FechaIn], [FechaFn] FROM [Curso]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="sqlcursos" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [Nombre], [Descripcion], [FechaIn], [FechaFn] FROM [Curso]"></asp:SqlDataSource>
                 </asp:Panel>
                 <asp:Panel ID="pModificarCurso" runat="server">
                     <div class="text-center">
@@ -333,41 +221,36 @@
                         <br />
                         Modificar Curso<strong><br />
                         <br />
+                            <asp:GridView ID="Grid_CursosE" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="sqlcursos" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " OnSelectedIndexChanged="Grid_CursosD_SelectedIndexChanged" VerticalAlign="Middle">
+                                <Columns>
+                                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                                    <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+                                    <asp:BoundField DataField="FechaIn" HeaderText="FechaIn" SortExpression="FechaIn" />
+                                    <asp:BoundField DataField="FechaFn" HeaderText="FechaFn" SortExpression="FechaFn" />
+                                    <asp:CommandField ButtonType="Image" CausesValidation="False" EditImageUrl="~/img/Modificar.png" HeaderImageUrl="~/img/Modificar.png" InsertVisible="False" ShowCancelButton="False" ShowEditButton="True" />
+                                </Columns>
+                                <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                                <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                                <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                                <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                                <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                                <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                                <SortedDescendingHeaderStyle BackColor="#242121" />
+                        </asp:GridView>
                             </strong></span>
-                    <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle">
-                        <Columns>
-                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                        <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
-                        <asp:BoundField DataField="FechaIn" HeaderText="Inicio" SortExpression="FechaIn" />
-                        <asp:BoundField DataField="FechaFn" HeaderText="Fin" SortExpression="FechaFn" />
-                        <asp:ButtonField ButtonType="Image" HeaderImageUrl="~/img/Modificar.png" ImageUrl="~/img/Modificar.png" />
-                    </Columns>
-                    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-                    <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
-                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                    <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                    <SortedDescendingHeaderStyle BackColor="#242121" />
-                    </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [Nombre], [Descripcion], [FechaIn], [FechaFn] FROM [Curso]"></asp:SqlDataSource>
                         
                     </div>
 
                 </asp:Panel>
-                <asp:Panel ID="pEliminarCurso" runat="server" style="position: relative; text-align: center"><span class="EstiloTitulo">
-                    <br />
-                    Eliminar Curso<br />
-                    <br />
-                    </span>
-                    <asp:GridView ID="GridView7" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle">
+                <asp:Panel ID="pEliminarCurso" runat="server">Eliminar Curso<br />
+                    <asp:GridView ID="Grid_CursosD" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="sqlcursos" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " OnSelectedIndexChanged="Grid_CursosD_SelectedIndexChanged" VerticalAlign="Middle" DataKeyNames="Nombre,FechaIn">
                         <Columns>
                             <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                             <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
-                            <asp:BoundField DataField="FechaIn" HeaderText="Inicio" SortExpression="FechaIn" />
-                            <asp:BoundField DataField="FechaFn" HeaderText="Fin" SortExpression="FechaFn" />
-                            <asp:ButtonField ButtonType="Image" HeaderImageUrl="~/img/Eliminar.png" ImageUrl="~/img/Eliminar.png" />
+                            <asp:BoundField DataField="FechaIn" HeaderText="Fecha Inicio" SortExpression="FechaIn" />
+                            <asp:BoundField DataField="FechaFn" HeaderText="Fecha Fin" SortExpression="FechaFn" />
+                            <asp:CommandField ButtonType="Image" CausesValidation="False" HeaderImageUrl="~/img/trash.png" InsertVisible="False" ShowCancelButton="False" SelectImageUrl="~/img/trash.png" ShowSelectButton="True" />
                         </Columns>
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -378,7 +261,6 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
-                    <br />
                 </asp:Panel>
             </div>
 	    </div>
