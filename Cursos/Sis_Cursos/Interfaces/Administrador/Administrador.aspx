@@ -39,8 +39,7 @@
 	  </a>
 	  <div class="dropdown">
 		  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		    Nombre Usuario
-		  </button>
+		    Nombre Usuario</button>
 		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 		    <a class="dropdown-item" href="#"><i class="fas fa-edit"></i>Editar</a>
   			<div class="dropdown-divider"></div>
@@ -148,7 +147,42 @@
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
                 </asp:Panel>
-                <asp:Panel ID="pAgregarDocente" runat="server">Agregar Docente</asp:Panel>
+                <asp:Panel ID="pAgregarDocente" runat="server">
+                    <div class="col-8 contenedor">
+                      <br />
+                        <form>
+                          <div class="form-row">
+                            <div class="col">
+                                <label for="NombreDocente">Nombre</label>                                                  
+                                <input type="text" class="form-control" id="NombreDocente" placeholder="Nombre"/>
+                            </div>
+                            <div class="col">
+                                <label for="ApellidoDocente">Apellido</label>
+                                <input type="text" class="form-control" id="ApellidoDocente" placeholder="Apellido"/>
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="CorreoDocente">Correo</label>
+                              <input type="email" class="form-control" id="CorreoDocente" placeholder="Correo"/>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="ContraseñaDocente">Contraseña</label>
+                              <input type="password" class="form-control" id="ContraseñaDocente" placeholder="Contraseña"/>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="UsuarioDocente">Usuario</label>
+                            <textarea class="form-control" id="UsuarioDocente" rows="1"></textarea>
+                          </div>
+                        </form>
+                          <br />
+                           <button class="btn btn-primary" type="submit">Agregar</button>
+	                  </div>
+                </asp:Panel>
+
+
+
                 <asp:Panel ID="pMostrarDocente" runat="server" style="position: relative; text-align: center;">
                     <span class="EstiloTitulo">
                     <br />
@@ -171,7 +205,39 @@
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
                 </asp:Panel>
-                <asp:Panel ID="pAgregarDocenteCurso" runat="server">Agregar Docente a curso</asp:Panel>
+                <asp:Panel ID="pAgregarDocenteCurso" runat="server">
+                    <div class="col-8 contenedor">
+                      <br />
+                      <form>
+                          <div class="form-group">
+                            <label for="NombreCurso">Nombre</label>
+                            <textarea class="form-control" id="NombreCurso" rows="1"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label for="DescripcionCurso">Descripción</label>
+                            <textarea class="form-control" id="DescripcionCurso" rows="3"></textarea>
+                          </div>
+                        </form>
+                      <form>
+                          <div class="row">
+                            <div class="col">
+                              <label for="FechaInicio">Fecha Inicio</label>
+                              <input type="date" class="form-control" id="FechaInicio"/>
+                            </div>
+                            <div class="col">
+                              <label for="FechaFin">Fecha Fin</label>
+                              <input type="date" class="form-control" id="FechaFin"/>
+                            </div>
+                          </div>
+                        </form>
+                      <br />
+                       <button class="btn btn-primary" type="submit">Agregar</button>
+	              </div>
+                </asp:Panel>
+
+
+
+
                 <asp:Panel ID="pEliminarDocente" runat="server">Eliminar Docente<br />
                     <asp:GridView ID="Grid_Docentes_D" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " Height="200px" HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle" Width="243px" DataKeyNames="IdUsuario" OnSelectedIndexChanged="Grid_Docentes_D_SelectedIndexChanged">
                         <Columns>
