@@ -41,7 +41,7 @@
 		  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		    Nombre Usuario</button>
 		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-		    <a class="dropdown-item" href="#"><i class="fas fa-edit"></i>Editar</a>
+		    <a class="dropdown-item" href="../../Interfaces/Editar/Editar.aspx"><i class="fas fa-edit"></i>Editar</a>
   			<div class="dropdown-divider"></div>
 		    <a class="dropdown-item" href="../../index.aspx"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a>
 		  </div>
@@ -188,8 +188,7 @@
                     <br />
                     &nbsp;Mostrar Docente<br />
                     <br />
-                    </span>
-                    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " VerticalAlign="Middle" Height="200px" Width="243px">
+                    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" HeaderStyle-CssClass=" " Height="200px" HorizontalAlign="Center" ItemStyle="" ItemStyle-CssClass=" " OnSelectedIndexChanged="GridView2_SelectedIndexChanged" VerticalAlign="Middle" Width="243px">
                         <Columns>
                             <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
                             <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
@@ -204,6 +203,7 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                     </asp:GridView>
+                    </span>
                 </asp:Panel>
                 <asp:Panel ID="pAgregarDocenteCurso" runat="server">
                     <div class="col-8 contenedor">

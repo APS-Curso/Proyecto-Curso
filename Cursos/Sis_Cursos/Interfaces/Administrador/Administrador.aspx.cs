@@ -242,5 +242,10 @@ namespace Sis_Cursos.Interfaces.Administrador
             //ObjNU.BorrarUsuario(id,new N_Usuarios().BuscarUsuarioPorId(id).PasswordUsuario);
             Response.Redirect("Administrador.aspx");
         }
+
+        protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
