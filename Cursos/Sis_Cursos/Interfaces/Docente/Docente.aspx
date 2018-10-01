@@ -38,7 +38,7 @@
 		    Nombre Usuario
 		  </button>
 		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-		    <a class="dropdown-item" href="#"><i class="fas fa-edit"></i>Editar</a>
+		    <a class="dropdown-item" href="../../Interfaces/Editar/Editar.aspx"><i class="fas fa-edit"></i>Editar</a>
   			<div class="dropdown-divider"></div>
 		    <a class="dropdown-item" href="../../index.aspx"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a>
 		  </div>
